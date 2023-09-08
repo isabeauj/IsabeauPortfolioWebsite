@@ -33,7 +33,7 @@ export default function Home() {
             priority
           />
           <div className='vertStack-left-aligned'>
-            <p className='text'>Your friendly neighborhood UI/UX designer. What's a UI/UX designer?</p>
+            <p className='text'>Your friendly neighborhood UI/UX designer. What&apos;s a UI/UX designer?</p>
             {/* <button> */}
               {/* <p className='button-text'>FIND OUT</p> */}
               <Image
