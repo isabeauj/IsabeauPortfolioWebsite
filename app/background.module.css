@@ -1,5 +1,7 @@
 .backgroundHolder {
     position: absolute;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .background::before {
@@ -30,51 +32,54 @@
 }
 
 .waves {
-    width: 180%;
+    width: 280vw;
     height: auto;
 }
 
 .waveBack {
     position: absolute;
-    width: 250vh;
+    /* width: 250vh; */
     height: auto;
     overflow-x: hidden;
     transition: transform 0.3s ease-out;
     z-index: -15;
 
-    top: -8rem;
-    left: -10rem;
+    top: 38rem;
+    /* left: -10rem; */
 
     filter: drop-shadow(0px 4px 48px #0d3229);
 }
 
 .waveMiddle {
     position: absolute;
-    width: 250vh;
+    /* width: 250vh; */
     height: auto;
     overflow-x: hidden;
     transition: transform 0.3s ease-out;
     z-index: -13;
 
-    top: -5rem;
-    left: -10rem;
+    top: 43rem;
+    /* left: -10rem; */
     filter: drop-shadow(0px 4px 48px #0d3229);
 }
 
 .waveFront {
     position: absolute;
-    width: 250vh;
+    /* width: 250vh; */
     height: auto;
     overflow-x: hidden;
     transition: transform 0.3s ease-out;
     z-index: -10;
 
-    left: -10rem;
+    top: 50rem;
+    /* left: -10rem; */
     filter: drop-shadow(0px 4px 48px #0d3229);
 }
 
 .waveHolder {
-    position: relative;
-    top: -30rem;
-    left: -80rem;
+    position: absolute;
+        /* overflow-x: hidden; */
+    /* top: -30rem; */
+    top: 0%;
+    left: -50%;
 }

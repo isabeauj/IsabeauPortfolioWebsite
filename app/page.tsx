@@ -5,7 +5,7 @@ import Background from './background'
 
 export default function Home() {
   return (
-    <div className='vertical-flex'>
+    <div className='vertical-flex fixed-width'>
       <Background/>
       <Navbar className='position' />
       <div className='horiz-flex-center rel-move'>

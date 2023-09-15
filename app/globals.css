@@ -43,8 +43,6 @@
   }
 }
 
-
-
 body {
   /* color: #0d3229; */
   background: #0d3229;
@@ -55,6 +53,11 @@ body {
   font-weight: bold;
   font-style: normal;
   font-size: 24px;
+}
+
+.fixed-width {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .position {
