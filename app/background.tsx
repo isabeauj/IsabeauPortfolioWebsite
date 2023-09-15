@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react';
 
 
 function Background(props: any) {
-    const [viewBoxOffset, setViewBoxOffset] = useState(0);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
 
     useEffect(() => {
         const handleScroll = () => {
-            setViewBoxOffset(window.scrollY * 0.5 - 500);
+            setScrollPosition(window.scrollY * 0.4);
             console.log(window.scrollY)
         };
 
@@ -20,119 +20,28 @@ function Background(props: any) {
         }
     }, []);
 
-    // const svgStyle = {
-    //     transform: `translateX(${scrollY}px)`,
-    //     transition: 'transform 0.3s ease', // Optional, for smoother transition
-    // };
-
-    // const waveTransform = {
-    //     transform: `translateX(${scrollY * 0.5}px)`  // Adjust 0.5 to control the speed of the wave movement
-    // }
-
-    // script.js
-
-    // const circle = document.querySelector('svg circle');
-
-    // window.addEventListener('scroll', function () {
-    //     const scrollY = window.scrollY;
-
-    //     // This is where the magic happens
-    //     // You can adjust the multiplier to change the speed at which the SVG moves
-    //     const translateY = scrollY * 0.5;
-
-    //     circle.style.transform = `translateY(${translateY}px)`;
-    // });
-
-
     return (
         <div className={`${BackgroundCSS.backgroundHolder}`}>
             <div className={`${BackgroundCSS.background}`} />
             <div className={`${BackgroundCSS.sun}`}>
                 <svg width="586" height="786" viewBox="0 0 586 786" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
-                        <path d="M392.97 5.96228V780.038" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M780.038 392.97H5.9624" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M667 667L179 179" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M119.304 666.636L666.636 119.304" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M472.804 212.196L313.136 573.804" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M573.804 472.804L212.195 313.136" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M464.397 577.263L321.602 208.678" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
-                        <path d="M208.678 464.398L577.262 321.602" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M392.97 5.96228V780.038" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M780.038 392.97H5.9624" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M667 667L179 179" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M119.304 666.636L666.636 119.304" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M472.804 212.196L313.136 573.804" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M573.804 472.804L212.195 313.136" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M464.397 577.263L321.602 208.678" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M208.678 464.398L577.262 321.602" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
                     </g>
                 </svg>
             </div>
             <div className={`${BackgroundCSS.waveHolder}`}>
 
-                {/* <svg className={`${svgStyle} ${BackgroundCSS.waveBack}`} viewBox={`${viewBoxOffset} 0 1512 1190`} width="1512" height="1190" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_18_1675)">
-                        <path d="M1999.09 274.105C1885.44 157.899 1660.18 110.824 1443.42 135.557C1389.29 141.736 1327.3 150.061 1283.66 130.162C1247.23 113.545 1238.91 83.6983 1217.44 59.6553C1177.07 14.4432 1079.95 -10.0726 996.679 3.93044C898.286 20.4782 826.325 82.4467 724.029 81.6634C623.617 80.8893 543.45 18.2023 443.565 24.3162C400.839 26.9305 363.233 42.1665 332.105 59.6367C300.977 77.1069 274.215 97.2749 241.124 113.438C208.034 129.601 166.226 141.801 123.5 139.187C51.3031 134.765 56.1481 98.5635 22.2562 71.6142C-11.9341 44.4239 -72.941 35.6494 -126.896 31.4035C-255.31 21.294 -356.837 37.4525 -436.36 99.0548L-436.384 99.0733C-731.909 328.04 -821.052 486.232 -813.568 595.002C-821.052 703.768 -731.909 861.959 -436.384 1090.93L-436.36 1090.95C-356.837 1152.55 -255.31 1168.71 -126.896 1158.6C-72.941 1154.35 -11.9341 1145.58 22.2562 1118.39C56.1481 1091.44 51.3031 1055.24 123.5 1050.82C166.226 1048.2 208.034 1060.4 241.124 1076.57C274.215 1092.73 300.985 1112.9 332.105 1130.37C363.225 1147.84 400.839 1163.07 443.565 1165.69C543.45 1171.8 623.617 1109.11 724.029 1108.34C826.325 1107.55 898.294 1169.53 996.679 1186.07C1079.95 1200.08 1177.07 1175.57 1217.44 1130.35C1238.91 1106.31 1247.23 1076.46 1283.66 1059.84C1327.3 1039.94 1389.29 1048.27 1443.42 1054.45C1660.18 1079.18 1885.44 1032.1 1999.09 915.9C2099.08 813.665 2116.16 706.642 2108.33 595.007C2116.16 483.367 2099.08 376.349 1999.09 274.109V274.105Z" fill="#1F443B" />
-                    </g>
-                    <defs>
-                        <filter id="filter0_d_18_1675" x="-881.997" y="-64.002" width="3060" height="1326.01" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                            <feOffset dy="4" />
-                            <feGaussianBlur stdDeviation="34" />
-                            <feComposite in2="hardAlpha" operator="out" />
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.196078 0 0 0 0 0.160784 0 0 0 1 0" />
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_18_1675" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_18_1675" result="shape" />
-                        </filter>
-                    </defs>
-                </svg> */}
-
-                {/* <svg className={`${svgStyle} ${BackgroundCSS.waveBack}`} width="1512" height="1190" viewBox={`${viewBoxOffset} 0 1512 1190`} fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_18_1675)">
-                        <path d="M1999.09 274.105C1885.44 157.899 1660.18 110.824 1443.42 135.557C1389.29 141.736 1327.3 150.061 1283.66 130.162C1247.23 113.545 1238.91 83.6983 1217.44 59.6553C1177.07 14.4432 1079.95 -10.0726 996.679 3.93044C898.286 20.4782 826.325 82.4467 724.029 81.6634C623.617 80.8893 543.45 18.2023 443.565 24.3162C400.839 26.9305 363.233 42.1665 332.105 59.6367C300.977 77.1069 274.215 97.2749 241.124 113.438C208.034 129.601 166.226 141.801 123.5 139.187C51.3031 134.765 56.1481 98.5635 22.2562 71.6142C-11.9341 44.4239 -72.941 35.6494 -126.896 31.4035C-255.31 21.294 -356.837 37.4525 -436.36 99.0548L-436.384 99.0733C-731.909 328.04 -821.052 486.232 -813.568 595.002C-821.052 703.768 -731.909 861.959 -436.384 1090.93L-436.36 1090.95C-356.837 1152.55 -255.31 1168.71 -126.896 1158.6C-72.941 1154.35 -11.9341 1145.58 22.2562 1118.39C56.1481 1091.44 51.3031 1055.24 123.5 1050.82C166.226 1048.2 208.034 1060.4 241.124 1076.57C274.215 1092.73 300.985 1112.9 332.105 1130.37C363.225 1147.84 400.839 1163.07 443.565 1165.69C543.45 1171.8 623.617 1109.11 724.029 1108.34C826.325 1107.55 898.294 1169.53 996.679 1186.07C1079.95 1200.08 1177.07 1175.57 1217.44 1130.35C1238.91 1106.31 1247.23 1076.46 1283.66 1059.84C1327.3 1039.94 1389.29 1048.27 1443.42 1054.45C1660.18 1079.18 1885.44 1032.1 1999.09 915.9C2099.08 813.665 2116.16 706.642 2108.33 595.007C2116.16 483.367 2099.08 376.349 1999.09 274.109V274.105Z" fill="#1F443B" />
-                    </g>
-                    <defs>
-                        <filter id="filter0_d_18_1675" x="-881.997" y="-64.002" width="3060" height="1326.01" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                            <feOffset dy="4" />
-                            <feGaussianBlur stdDeviation="34" />
-                            <feComposite in2="hardAlpha" operator="out" />
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.196078 0 0 0 0 0.160784 0 0 0 1 0" />
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_18_1675" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_18_1675" result="shape" />
-                        </filter>
-                    </defs>
-                </svg> */}
-
-
-
-                {/* <svg className={`${svgStyle} ${BackgroundCSS.waveBack}`} width="3451" height="1083" viewBox={`${viewBoxOffset} 0 3451 1083`} fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_542_21437)">
-                        <path d="M507.064 107.118C648.344 127.463 677.183 259.412 800.398 240.795C930.336 221.123 948.077 66.6219 1063.68 64.0309C1186.57 61.3439 1209.57 234.941 1343.64 245.113C1473.18 254.902 1497.72 96.2745 1636.98 98.5776C1768.05 100.785 1793.49 242.139 1930.31 236.573C2029.87 232.446 2031.09 157.019 2146.93 137.443C2288.54 113.548 2316.24 221.411 2463.6 206.44C2599.69 192.622 2629.75 95.123 2713.59 128.806C2811.94 168.343 2799.95 314.207 2890.27 348.658C3005.38 392.609 3091.25 181.01 3193.57 227.936C3232.29 245.689 3263.8 344.723 3326.91 542.695C3388.4 735.677 3388.23 784.139 3376.89 827.226C3358.99 895.36 3311.11 958.6 3253.6 978.081C3158.17 1010.52 3121.88 893.729 3000.28 878.951C2846.69 860.334 2804.97 1034.51 2660.29 1008.31C2545.82 987.581 2545.09 873.577 2433.62 857.455C2295.42 837.399 2277.86 1006.29 2134.32 999.768C2002.11 993.723 1970.98 888.434 1833.67 863.004C1661.69 831.144 1614.38 1008.12 1420.36 1008.4C1253.32 1008.6 1238.09 847.763 1037.11 831.641C869.741 818.206 853.459 927.508 700.513 896.32C539.224 863.405 511.762 732.415 370.563 741.147C249.455 748.537 206.115 848.626 143.9 810.145C73.0978 766.194 51.3874 587.99 81.4418 456.233C131.1 238.108 337.269 82.9356 507.226 107.406L507.064 107.118Z" fill="#173C33" />
-                    </g>
-                    <defs>
-                        <filter id="filter0_d_542_21437" x="0.288574" y="0" width="3450.43" height="1083" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                            <feOffset dy="4" />
-                            <feGaussianBlur stdDeviation="34" />
-                            <feComposite in2="hardAlpha" operator="out" />
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.196078 0 0 0 0 0.160784 0 0 0 1 0" />
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_542_21437" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_542_21437" result="shape" />
-                        </filter>
-                    </defs>
-                </svg> */}
-
-
-                {/* <svg className={`${svgStyle} ${BackgroundCSS.waveBack}`} width="412" height="83" viewBox={`${viewBoxOffset} 0 412 83`} fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_549_54)">
-                        <path d="M89.3399 9.21995C97.8699 5.72995 106.58 2.16995 116.47 2.97995C129.73 4.06995 131.67 11.93 141.97 10.58C151.72 9.29995 152.49 1.92995 162.04 1.08995C171.81 0.22995 173.25 7.73995 184.28 9.22995C199.53 11.2899 204.49 -2.03005 219.27 0.27995C229.69 1.89995 227.78 8.60995 240.43 11.4C249.27 13.35 262.41 12.77 273.52 8.95995C275.92 8.13995 278.17 7.17995 281.66 7.05995C289.84 6.77995 292.12 11.53 298.75 12.49C308.8 13.94 311.21 4.12995 322.08 4.61995C331.1 5.02995 331.61 11.87 340.8 12.49C351.06 13.17 352.91 4.78995 364.4 4.34995C373.45 4.00995 374.21 9.12995 386.64 10.32C398.04 11.41 400.79 7.41995 405.38 10.17C413.62 15.09 413.35 33.04 408.81 45.2299C403.03 60.7199 390.05 67.71 387.73 68.91C375.47 75.25 363.3 73.9499 356.81 73.2499C343.56 71.8299 341.67 67.4899 330.5 68.0999C318.96 68.7199 318 73.5099 308.53 73.5299C293.82 73.5499 292.29 62.0299 279.23 61.0499C262.13 59.7699 256.22 78.8799 238.27 77.0499C227.92 75.9899 227.6 69.3999 217.65 69.4499C203.07 69.5299 198.8 83.7299 187 82.7399C176.17 81.8399 176.72 69.6199 164.49 65.6499C147.5 60.1399 136.88 80.5899 117.02 75.6899C105.9 72.9499 104.59 65.3899 94.5099 65.9199C83.3399 66.5099 80.2899 76.0199 71.1799 74.8699C61.6199 73.6599 61.6499 62.78 51.6499 60.49C40.5899 57.97 34.4399 69.8699 21.8099 68.3599C11.6599 67.1399 5.53988 58.74 4.88988 57.83C-4.90012 44.19 0.809879 20.61 15.0199 10.85C26.1299 3.21995 41.9799 4.35995 52.1799 8.67995C60.0399 12.01 62.6699 16.4199 70.3499 16.5499C76.8799 16.6599 78.8099 13.53 89.3399 9.22995V9.21995Z" fill="white" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_549_54">
-                            <rect width="411.96" height="82.78" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg> */}
                 <div className={`${BackgroundCSS.waveFront}`}>
                     {/* {#173c33 } */}
-                    <svg className={`${BackgroundCSS.waves}`} width="412" height="83" viewBox="0 0 412 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style={{ position: 'relative', left: scrollPosition}} className={`${BackgroundCSS.waves}`} width="412" height="83" viewBox="0 0 412 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="f2" x="0" y="0" width="150%" height="150%">
                                 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
@@ -147,7 +56,7 @@ function Background(props: any) {
 
                 <div className={`${BackgroundCSS.waveMiddle}`}>
                     {/* #1a4037 */}
-                    <svg className={`${BackgroundCSS.waves}`} width="409" height="101" viewBox="0 0 409 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style={{ position: 'relative', left: -scrollPosition}} className={`${BackgroundCSS.waves}`} width="409" height="101" viewBox="0 0 409 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="f2" x="0" y="0" width="150%" height="150%">
                                 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
@@ -162,7 +71,7 @@ function Background(props: any) {
 
                 <div className={`${BackgroundCSS.waveBack}`}>
                     {/* #1F443B */}
-                    <svg className={`${BackgroundCSS.waves}`} width="405" height="117" viewBox="0 0 405 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style={{ position: 'relative', left: (scrollPosition* 0.7)}} className={`${BackgroundCSS.waves}`} width="405" height="117" viewBox="0 0 405 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="f2" x="0" y="0" width="150%" height="150%">
                                 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
