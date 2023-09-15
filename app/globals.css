@@ -43,6 +43,8 @@
   }
 }
 
+
+
 body {
   /* color: #0d3229; */
   background: #0d3229;
@@ -60,30 +62,9 @@ body {
   margin-left: 3rem;
 }
 
-.background::before {
-  width: 100vw;
-  height: 100vh;
-  content: "";
-  /* This is necessary for the pseudo-element to be generated */
-  position: absolute;
-  /* Absolutely position the pseudo-element relative to the parent div */
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* These four properties stretch the pseudo-element to cover the entire div */
+.chonky{
+  height:1000rem;
   display: block;
-  background-image: url('/grain.png');
-  mix-blend-mode: overlay;
-  background-size: contain;
-  opacity: 0.4;
-  z-index: -1;
-  /* Position it behind the content of the div */
-}
-
-.background {
-  content: '';
-  position: relative;
 }
 
 .vertical-flex {
@@ -115,7 +96,7 @@ body {
 }
 
 .fish-location {
-  margin-left: 3.8rem;
+  margin-left: 4.6rem;
   margin-top: 3rem;
 }
 

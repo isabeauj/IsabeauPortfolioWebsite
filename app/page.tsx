@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Navbar from './navbar'
 import ImageWithTextButton from './ImageWithTextButton'
+import Background from './background'
 
 export default function Home() {
   return (
     <div className='vertical-flex'>
-      <div className='background' />
+      <Background/>
       <Navbar className='position' />
       <div className='horiz-flex-center rel-move'>
         <Image
@@ -35,18 +36,20 @@ export default function Home() {
           />
           <div className='vertStack-left-aligned'>
             <p className='text'>Your friendly neighborhood UI/UX designer. What&apos;s a UI/UX designer?</p>
-              <ImageWithTextButton className='fish-location' />
-              <Image
-                src="/scroll.svg"
-                alt="scroll arrow"
-                className="fish-button"
-                width={100}
-                height={24}
-                priority
-              />
+            <ImageWithTextButton className='fish-location' />
+            <Image
+              src="/scroll.svg"
+              alt="scroll arrow"
+              className="fish-button"
+              width={100}
+              height={24}
+              priority
+            />
           </div>
         </div>
       </div>
+      <div className='chonky'> chonky</div>
+
     </div>
   )
 }

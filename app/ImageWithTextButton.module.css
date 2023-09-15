@@ -9,9 +9,9 @@
 
 .imageButton {
     position: relative;
-    width: 200px;
+    width: 257px;
     /* Or whatever width you want */
-    height: 46px;
+    height: 57px;
     /* Or whatever height you want */
     border: none;
     cursor: pointer;
@@ -19,6 +19,16 @@
     padding: 0;
     overflow: hidden;
     transition: filter 0.3s;
+}
+
+.fishColor {
+    fill: #CF7B0C;
+    /* fill:red; */
+}
+
+.fishColor:hover {
+    fill: #783608;
+    /* fill:red; */
 }
 
 .imageContainer {
@@ -29,8 +39,10 @@
     bottom: 0;
     z-index: 1;
 }
-.imageContainer:hover {
-    filter: grayscale(100%);
+
+.noHover {
+    pointer-events:none;
+    text-decoration:none;
 }
 
 .imageButton span {
@@ -50,7 +62,7 @@
 
 /* Optional: Add some hover effect */
 .imageButton:hover span {
-    color: yellow;
-    filter: grayscale(100%)
+    color: #CF7B0C;
+    /* filter: grayscale(100%) */
     /* Or any other color for hover effect */
 }

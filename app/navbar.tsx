@@ -18,7 +18,6 @@ const Navbar = (props:any) => {
                 <h1 className={`${NavbarCSS.flexItem} ${NavbarCSS.openSansBold}`}>RESUME</h1>
                 <h1 className={`${NavbarCSS.flexItem} ${NavbarCSS.openSansBold}`}>CONTACT</h1>
             </div>
-
         </div>
         );
 }

@@ -1,0 +1,80 @@
+.backgroundHolder {
+    position: absolute;
+}
+
+.background::before {
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    /* This is necessary for the pseudo-element to be generated */
+    position: relative;
+    /* Absolutely position the pseudo-element relative to the parent div */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* These four properties stretch the pseudo-element to cover the entire div */
+    display: block;
+    background-image: url('/grain.png');
+    mix-blend-mode: overlay;
+    background-size: contain;
+    opacity: 0.4;
+    z-index: -1;
+    /* Position it behind the content of the div */
+    background-attachment: scroll
+}
+
+.background {
+    content: '';
+    position: relative;
+}
+
+.waves {
+    width: 180%;
+    height: auto;
+}
+
+.waveBack {
+    position: absolute;
+    width: 250vh;
+    height: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-out;
+    z-index: -15;
+
+    top: -8rem;
+    left: -10rem;
+
+    filter: drop-shadow(0px 4px 48px #0d3229);
+}
+
+.waveMiddle {
+    position: absolute;
+    width: 250vh;
+    height: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-out;
+    z-index: -13;
+
+    top: -5rem;
+    left: -10rem;
+    filter: drop-shadow(0px 4px 48px #0d3229);
+}
+
+.waveFront {
+    position: absolute;
+    width: 250vh;
+    height: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-out;
+    z-index: -10;
+
+    left: -10rem;
+    filter: drop-shadow(0px 4px 48px #0d3229);
+}
+
+.waveHolder {
+    position: relative;
+    top: -30rem;
+    left: -80rem;
+}
