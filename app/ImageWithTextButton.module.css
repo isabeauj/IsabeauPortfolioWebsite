@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/Open_Sans/static/OpenSans-ExtraBold.ttf') format('truetype');
+
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.imageButton {
+    position: relative;
+    width: 200px;
+    /* Or whatever width you want */
+    height: 46px;
+    /* Or whatever height you want */
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    overflow: hidden;
+    transition: filter 0.3s;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.imageContainer:hover {
+    filter: grayscale(100%);
+}
+
+.imageButton span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* This ensures the text is above the image */
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0D3229;
+    
+    /* Or any other color that contrasts with your image */
+}
+
+/* Optional: Add some hover effect */
+.imageButton:hover span {
+    color: yellow;
+    filter: grayscale(100%)
+    /* Or any other color for hover effect */
+}
