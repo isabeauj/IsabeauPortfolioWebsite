@@ -47,6 +47,20 @@ function Background(props: any) {
     return (
         <div className={`${BackgroundCSS.backgroundHolder}`}>
             <div className={`${BackgroundCSS.background}`} />
+            <div className={`${BackgroundCSS.sun}`}>
+                <svg width="586" height="786" viewBox="0 0 586 786" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                        <path d="M392.97 5.96228V780.038" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M780.038 392.97H5.9624" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M667 667L179 179" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M119.304 666.636L666.636 119.304" stroke="#CF7B0C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M472.804 212.196L313.136 573.804" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M573.804 472.804L212.195 313.136" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M464.397 577.263L321.602 208.678" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
+                        <path d="M208.678 464.398L577.262 321.602" stroke="#CF7B0C" stroke-miterlimit="10" stroke-linecap="round" />
+                    </g>
+                </svg>
+            </div>
             <div className={`${BackgroundCSS.waveHolder}`}>
 
                 {/* <svg className={`${svgStyle} ${BackgroundCSS.waveBack}`} viewBox={`${viewBoxOffset} 0 1512 1190`} width="1512" height="1190" fill="none" xmlns="http://www.w3.org/2000/svg">
