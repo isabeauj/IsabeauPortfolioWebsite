@@ -1,22 +1,22 @@
-import './navbar.css'
+import NavbarCSS from './navbar.module.css'
 import Image from 'next/image'
 
 const Navbar = (props:any) => {
     return (
-    
-        <div className={`header ${props.className}`}>
+
+        <div className={`${NavbarCSS.header} ${props.className}`}>
             <Image
                 src="/nav_logo.svg"
                 alt="Isabeau Jackson's Logo"
-                className="circle-background"
+                className={`${NavbarCSS.circleBackground}`}
                 width={100}
                 height={24}
                 priority
             />
-            <div className='nav-text horiz-flex'>
-                <h1 className='flex-item open-sans-bold'>PORTFOLIO</h1>
-                <h1 className='flex-item open-sans-bold'>RESUME</h1>
-                <h1 className='flex-item open-sans-bold'>CONTACT</h1>
+            <div className={`${NavbarCSS.navText} ${NavbarCSS.horizFlex}`}>
+                <h1 className={`${NavbarCSS.flexItem} ${NavbarCSS.openSansBold}`}>PORTFOLIO</h1>
+                <h1 className={`${NavbarCSS.flexItem} ${NavbarCSS.openSansBold}`}>RESUME</h1>
+                <h1 className={`${NavbarCSS.flexItem} ${NavbarCSS.openSansBold}`}>CONTACT</h1>
             </div>
 
         </div>

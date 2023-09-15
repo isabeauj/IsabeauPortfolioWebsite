@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Navbar from './navbar'
+import ImageWithTextButton from './ImageWithTextButton'
 
 export default function Home() {
   return (
@@ -34,26 +35,15 @@ export default function Home() {
           />
           <div className='vertStack-left-aligned'>
             <p className='text'>Your friendly neighborhood UI/UX designer. What&apos;s a UI/UX designer?</p>
-            {/* <button> */}
-              {/* <p className='button-text'>FIND OUT</p> */}
+              <ImageWithTextButton className='fish-location' />
               <Image
-                src="/fish.svg"
-                alt="fish button"
+                src="/scroll.svg"
+                alt="scroll arrow"
                 className="fish-button"
                 width={100}
                 height={24}
                 priority
               />
-            {/* </button> */}
-
-            <Image
-              src="/scroll.svg"
-              alt="scroll arrow"
-              className="fish-button"
-              width={100}
-              height={24}
-              priority
-            />
           </div>
         </div>
       </div>
