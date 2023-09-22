@@ -36,6 +36,34 @@
     height: auto;
 }
 
+.bird {
+    position: absolute;
+    right: 10%;
+    top: 5rem;
+    z-index: -5;
+}
+
+.boatFront {
+    position: absolute;
+    left: 8%;
+    top: 53rem;
+    z-index: -5;
+}
+
+.boatMid {
+    position: absolute;
+    right: 8%;
+    top: 45rem;
+    z-index: -10;
+}
+
+.boatBack {
+    position: absolute;
+    left: 38%;
+    top: 44.5rem;
+    z-index: -14;
+}
+
 .waveBack {
     position: absolute;
     /* width: 250vh; */
@@ -87,12 +115,12 @@
 .sun {
     position: absolute;
     right: 2%;
-
     z-index: -18;
 }
 
 /* Position sun based on screen resolution width so it is always above the waves */
 @media only screen and (min-width: 1920px) {
+
     /* Your styles for screens 1920px and wider go here */
     .sun {
         top: 21rem;
@@ -100,6 +128,7 @@
 }
 
 @media only screen and (max-width: 1919px) {
+
     /* Your styles for screens narrower than 1920px go here */
     .sun {
         top: calc(21rem + 10vw - 160px);
