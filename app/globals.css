@@ -61,8 +61,9 @@ body {
 }
 
 .position {
-  margin-top: 3rem;
-  margin-left: 3rem;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 .chonky {
