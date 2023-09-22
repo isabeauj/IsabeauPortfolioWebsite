@@ -65,8 +65,8 @@ body {
   margin-left: 3rem;
 }
 
-.chonky{
-  height:1000rem;
+.chonky {
+  height: 1000rem;
   display: block;
 }
 
@@ -139,11 +139,44 @@ body {
 
 .vertStack-left-aligned {
   display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.button-text{
- position: absolute; 
+.button-text {
+  position: absolute;
+}
+
+.center-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.quote {
+  /* top: calc(21rem + 10vw - 160px); */
+  margin-top: calc(-2rem + 15vw);
+  color: #a4b5b1;
+  font-family: 'OpenSansLight';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24px;
+  width: 50ch;
+  margin-left: 4.5rem;
+  line-height: 41px;
+}
+
+.quote-start {
+  position: relative;
+  left: -8rem;
+}
+
+.quote-end {
+  position: relative;
+  top: -3rem;
+  right: -44rem;
+
 }
