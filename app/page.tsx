@@ -1,13 +1,32 @@
+'use client';
 import Image from 'next/image'
 import Navbar from './navbar'
+import MobileNavbar from './mobileNavbar'
 import ImageWithTextButton from './ImageWithTextButton'
 import Background from './background'
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const renderComponent = () => {
+    if (windowWidth <= 1280) {
+      return <MobileNavbar className='position' />;
+    } else {
+      return <Navbar className='position' />;
+    }
+  };
+
   return (
     <div className='vertical-flex fixed-width'>
       <Background />
-      <Navbar className='position' />
+      {renderComponent()}
       <div className='horiz-flex-center rel-move'>
         <Image
           src="/header_logo.svg"

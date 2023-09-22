@@ -157,7 +157,6 @@ body {
 }
 
 .quote {
-  /* top: calc(21rem + 10vw - 160px); */
   margin-top: calc(-2rem + 15vw);
   color: #a4b5b1;
   font-family: 'OpenSansLight';
