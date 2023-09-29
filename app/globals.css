@@ -165,7 +165,7 @@ body {
   font-style: normal;
   font-size: 24px;
   width: 50ch;
-  margin-left: 4.5rem;
+  margin-left: 0rem;
   line-height: 41px;
 }
 
@@ -266,4 +266,31 @@ body {
     height: 3.25rem;
     align-self: center;
   }
+
+  .quote {
+    margin-top: calc(-2rem + 15vw);
+    color: #a4b5b1;
+    font-family: 'OpenSansLight';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    width: 70%;
+    margin-left: 0rem;
+    line-height: 30px;
+    text-align: left;
+  }
+
+    .quote-start {
+      position: relative;
+      left: calc(-15%);
+      top: 2rem;
+      width: 13%;
+    }
+  
+    .quote-end {
+      position: relative;
+      top: -3rem;
+      right: calc(-100%);
+      width: 13%;
+    }
 }

@@ -68,7 +68,7 @@ function Background(props: any) {
 
             </div>
             <div className={`${BackgroundCSS.boatMid}`}>
-                <svg style={{ position: 'relative', left: -scrollPosition * 0.6 }} width="198" height="175" viewBox="0 0 198 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={{ position: 'relative', left: -scrollPosition * 0.6 }} className={`${BackgroundCSS.mobileBoatMidSize}`} width="198" height="175" viewBox="0 0 198 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_16_1187)">
                         <path d="M49.5 83.5C49.5 41.9 89.1667 15.1667 109 7C90.6 19.8 89.6667 67.3333 91.5 89.5C89.5 71.9 62.6667 78.1667 49.5 83.5Z" fill="#0D3229" />
                         <path d="M109 16.5C109 34.9 104.667 72.8333 102.5 89.5C107.7 81.9 130 92.6667 140.5 99C140.5 72 109 -6.5 109 16.5Z" fill="#0D3229" />
@@ -92,7 +92,7 @@ function Background(props: any) {
 
 
             <div className={`${BackgroundCSS.boatFront}`}>
-                <svg style={{ position: 'relative', left: scrollPosition * 0.8 }} width="193" height="179" viewBox="0 0 193 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={{ position: 'relative', left: scrollPosition * 0.8 }} className={`${BackgroundCSS.mobileBoatFrontSize}`} width="193" height="179" viewBox="0 0 193 179" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_18_1653)">
                         <path d="M143.764 74.9047C138.174 33.6821 95.2742 12.5216 74.5234 7.09425C94.4765 17.3055 101.789 64.2823 102.951 86.4943C102.568 68.7852 130 71.3891 143.764 74.9047Z" fill="#1F443B" />
                         <path d="M75.8 16.5081C78.2726 34.7412 87.6641 71.7481 92.0508 87.9725C85.8767 81.1402 65.2258 94.8059 55.6721 102.493C52.0438 75.7377 72.7092 -6.28331 75.8 16.5081Z" fill="#1F443B" />

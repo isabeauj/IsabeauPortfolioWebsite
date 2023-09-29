@@ -254,4 +254,35 @@
         width: 40vw;
         height: 40vw;
     }
+
+    .boatFront {
+        position: absolute;
+        left: 4%;
+        top: 43rem;
+        z-index: -5;
+    }
+
+    .boatMid {
+        position: absolute;
+        right: 0%;
+        top: 36rem;
+        z-index: -10;
+    }
+
+    .mobileBoatMidSize {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .mobileBoatFrontSize {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .boatBack {
+        position: absolute;
+        left: 10%;
+        top: 35rem;
+        z-index: -14;
+    }
 }
