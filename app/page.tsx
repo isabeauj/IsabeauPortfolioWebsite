@@ -8,7 +8,7 @@ import Gallery from './gallery';
 import React, { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(1280);
   
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);

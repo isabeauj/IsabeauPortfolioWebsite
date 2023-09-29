@@ -7,10 +7,11 @@ import { useState, useEffect } from 'react';
 
 function Background(props: any) {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isMobile, setIsMobile] = useState(false);
 
 
     useEffect(() => {
+        setIsMobile(window.innerWidth <= 768);
         const handleScroll = () => {
             setScrollPosition(window.scrollY * 0.4);
             console.log(window.scrollY)
