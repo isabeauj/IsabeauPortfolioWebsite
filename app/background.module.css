@@ -115,7 +115,7 @@
 
 .sun {
     position: absolute;
-    right: 2%;
+    right: -9.5%;
     z-index: -18;
 }
 
@@ -154,6 +154,7 @@
     /* Your styles for screens 1920px and wider go here */
     .sun {
         top: 21rem;
+        right: -5%;
     }
 
     .boatFront {
@@ -183,5 +184,74 @@
     /* Your styles for screens narrower than 1920px go here */
     .sun {
         top: calc(21rem + 10vw - 160px);
+    }
+}
+
+@media (max-width:1024px) {
+    .waveBack {
+        position: absolute;
+        /* width: 250vh; */
+        height: auto;
+        overflow-x: hidden;
+        transition: transform 0.3s ease-out;
+        z-index: -15;
+
+        top: 33rem;
+        left: -50rem;
+
+        filter: drop-shadow(0px 4px 48px #0d3229);
+    }
+
+    .waveMiddle {
+        position: absolute;
+        /* width: 250vh; */
+        height: auto;
+        overflow-x: hidden;
+        transition: transform 0.3s ease-out;
+        z-index: -13;
+
+        top: 36rem;
+        left: -50rem;
+        filter: drop-shadow(0px 4px 48px #0d3229);
+    }
+
+    .waveFront {
+        position: absolute;
+        /* width: 250vh; */
+        height: auto;
+        overflow-x: hidden;
+        transition: transform 0.3s ease-out;
+        z-index: -10;
+
+        top: 43rem;
+        left: -50rem;
+        filter: drop-shadow(0px 4px 48px #0d3229);
+    }
+
+    .waves {
+        width: 800vw;
+        height: auto;
+    }
+
+    .waveHolder {
+        position: absolute;
+        /* overflow-x: hidden; */
+        /* top: -30rem; */
+        top: 0%;
+        left: -50%;
+    }
+
+    .bird {
+        position: absolute;
+        right: 40%;
+        top: 5rem;
+        width: 1rem;
+        height: 1rem;
+        z-index: -5;
+    }
+
+    .mobileBird {
+        width: 40vw;
+        height: 40vw;
     }
 }

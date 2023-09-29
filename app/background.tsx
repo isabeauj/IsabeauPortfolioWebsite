@@ -24,7 +24,7 @@ function Background(props: any) {
         <div className={`${BackgroundCSS.backgroundHolder}`}>
             <div className={`${BackgroundCSS.background}`} />
             <div className={`${BackgroundCSS.bird}`}>
-                <svg style={{ position: 'relative', left: -scrollPosition }} width="292" height="158" viewBox="0 0 292 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={{ position: 'relative', left: -scrollPosition }} className={`${BackgroundCSS.mobileBird}`} width="292" height="158" viewBox="0 0 292 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_16_1144)">
                         <path d="M60.9449 87.1813C51.0211 62.6229 31.3293 72.6459 22.7239 80.7272C20.7708 82.0675 17.8483 83.1599 21.7833 76.8073C26.7021 68.8666 36.9242 59.5793 46.6609 61.1435C54.6211 62.4223 61.8357 70.4279 64.1632 76.1408C64.3303 79.1408 63.1856 82.1056 67.5234 77.1203C72.2225 71.7196 80.7035 78.3583 79.0244 84.1186C87.8028 73.6573 98.8096 74.6089 103.383 75.5949C113.673 77.8133 116.969 90.8048 119.387 101.092C121.805 111.38 118.995 110.179 117.288 108.293C107.075 76.1503 87.3111 84.2773 78.7057 92.3586C67.5396 104.936 62.2126 94.1478 60.9449 87.1813Z" fill="#173C33" />
                         <path d="M167.506 33.6567C157.583 9.09819 137.891 19.1212 129.285 27.2025C127.332 28.5428 124.41 29.6353 128.345 23.2827C133.264 15.3419 143.486 6.05469 153.222 7.61886C161.183 8.89764 168.397 16.9032 170.725 22.6162C170.892 25.6162 169.747 28.581 174.085 23.5957C178.784 18.195 187.265 24.8337 185.586 30.5939C194.364 20.1326 205.371 21.0842 209.945 22.0702C220.235 24.2886 223.531 37.2801 225.949 47.5678C228.366 57.8554 225.557 56.6545 223.85 54.7681C213.637 22.6256 193.873 30.7527 185.267 38.834C174.101 51.4117 168.774 40.6232 167.506 33.6567Z" fill="#173C33" />
@@ -114,18 +114,19 @@ function Background(props: any) {
             </div>
 
             <div className={`${BackgroundCSS.sun}`}>
-                <svg width="586" height="786" viewBox="0 0 586 786" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="786" height="786" viewBox="0 0 786 786" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
-                        <path d="M392.97 5.96228V780.038" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
-                        <path d="M780.038 392.97H5.9624" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M392.97 5.96222V780.038" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M780.037 392.97H5.96191" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
                         <path d="M667 667L179 179" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
                         <path d="M119.304 666.636L666.636 119.304" stroke="#CF7B0C" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
                         <path d="M472.804 212.196L313.136 573.804" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
                         <path d="M573.804 472.804L212.195 313.136" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
-                        <path d="M464.397 577.263L321.602 208.678" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
+                        <path d="M464.398 577.263L321.603 208.678" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
                         <path d="M208.678 464.398L577.262 321.602" stroke="#CF7B0C" strokeMiterlimit="10" strokeLinecap="round" />
                     </g>
                 </svg>
+
             </div>
 
             <div className={`${BackgroundCSS.waveHolder}`}>

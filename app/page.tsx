@@ -27,7 +27,7 @@ export default function Home() {
     <div className='vertical-flex fixed-width'>
       <Background />
       {renderComponent()}
-      <div className='horiz-flex-center rel-move'>
+      <div className='horiz-flex-center rel-move mobile-vertical-stack'>
         <Image
           src="/header_logo.svg"
           alt="Isabeau Jackson's Logo"

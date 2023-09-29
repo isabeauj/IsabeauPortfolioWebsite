@@ -180,3 +180,90 @@ body {
   right: -44rem;
 
 }
+
+@media (max-width: 1024px) {
+  .mobile-vertical-stack {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    /* background-color: red; */
+  }
+
+  .rel-move {
+    position: relative;
+    left: 0rem;
+  }
+
+  .large-logo {
+    width: min(40vw, 20rem);
+    height: min(40vw, 20rem);
+    margin-top: 0rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .fish-text {
+    /* width: min(80vw, 20rem); */
+    width: 50vw;
+    height: 3.25rem;
+    margin-top: 1rem;
+  }
+
+  .left-margin {
+    margin-left: 0rem;
+  }
+
+  .vertical-flex {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .isa-text {
+    width: 85vw;
+    height: 40vw;
+    position: relative;
+    left: -0.5rem;
+    top: -0.8rem;
+    /* height: 13rem; */
+  }
+
+  .text {
+    color: #a4b5b1;
+    font-family: 'OpenSansLight';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    width: 80vw;
+    margin: 0rem;
+    /* margin-left: 4.5rem; */
+    /* margin-top: 3rem; */
+  }
+
+  .vertStack-left-aligned {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .fish-location {
+    margin-left: 0rem;
+    margin-top: 3rem;
+  }
+
+  .fish-button {
+    margin-left: 0rem;
+    margin-top: 2rem;
+    width: 13rem;
+    height: 3.25rem;
+    align-self: center;
+  }
+}
