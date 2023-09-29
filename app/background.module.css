@@ -45,14 +45,27 @@
 }
 
 .stars {
-    position: absolute;
+    position: relative;
+    left: -65rem;
+    top: -10rem;
+    /* position: absolute; */
     /* margin-top: calc(60vw-30rem); */
     /* right: 10%; */
     /* top: 5rem; */
     z-index: -20;
-}
-.starWidth{
     width: 100vw;
+    /* margin-left: 40rem; */
+
+    width: 300vw;
+    height: 65rem;
+    background-image: url('/starz.svg');
+    background-repeat: repeat;
+    background-size: calc(2698px * 0.6) calc(1742px * 0.6);
+}
+
+.starWidth {
+    width: 100vw;
+    height: 100%;
 }
 
 .boatFront {
@@ -74,6 +87,13 @@
     left: 38%;
     top: 44.5rem;
     z-index: -14;
+}
+
+.vertStack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .waveBack {
