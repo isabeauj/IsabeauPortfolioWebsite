@@ -151,14 +151,15 @@ body {
 
 .center-container {
   width: 100vw;
+  height: 52vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .quote {
-  margin-top: calc(-2rem + 15vw);
+  /* margin-top: calc(-2rem + 15vw); */
   color: #a4b5b1;
   font-family: 'OpenSansLight';
   font-weight: bold;
@@ -225,15 +226,6 @@ body {
     text-align: center;
   }
 
-  .isa-text {
-    width: 85vw;
-    height: 40vw;
-    position: relative;
-    left: -0.5rem;
-    top: -0.8rem;
-    /* height: 13rem; */
-  }
-
   .text {
     color: #a4b5b1;
     font-family: 'OpenSansLight';
@@ -259,6 +251,7 @@ body {
     margin-top: 3rem;
   }
 
+
   .fish-button {
     margin-left: 0rem;
     margin-top: 2rem;
@@ -268,29 +261,109 @@ body {
   }
 
   .quote {
-    margin-top: calc(-2rem + 15vw);
+    /* margin-top: calc(-2rem + 15vw); */
     color: #a4b5b1;
     font-family: 'OpenSansLight';
     font-weight: bold;
     font-style: normal;
     font-size: 18px;
     width: 70%;
+    /* margin-top: 4rem; */
     margin-left: 0rem;
     line-height: 30px;
     text-align: left;
   }
 
-    .quote-start {
-      position: relative;
-      left: calc(-15%);
-      top: 2rem;
-      width: 13%;
-    }
-  
-    .quote-end {
-      position: relative;
-      top: -3rem;
-      right: calc(-100%);
-      width: 13%;
-    }
+  .quote-start {
+    position: relative;
+    left: calc(-15%);
+    top: 2rem;
+    width: 13%;
+  }
+
+  .quote-end {
+    position: relative;
+    top: -3rem;
+    right: calc(-100%);
+    width: 13%;
+  }
+
+  .center-container {
+    /* margin-top: 10rem; */
+
+    width: 100vw;
+    margin: 0rem;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .isa-text {
+    width: 90vw;
+    height: 40vw;
+    position: relative;
+    left: -0.5rem;
+    top: -0.8rem;
+    /* height: 13rem; */
+    /* background-color: red; */
+  }
+
+}
+
+/* Tablet only */
+@media (min-width:600px) and (max-width: 1024px) {
+  .isa-text {
+    width: 60vw;
+    height: 30vw;
+    position: relative;
+    left: -0.5rem;
+    top: -0.8rem;
+    /* height: 13rem; */
+    /* background-color: orange; */
+  }
+
+  .center-container {
+    /* margin-top: 10rem; */
+
+    width: 100vw;
+    margin: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (min-width:1024px) and (max-width: 1920px) {
+
+  .quote {
+    /* margin-top: calc(-2rem + 15vw); */
+    color: #a4b5b1;
+    font-family: 'OpenSansLight';
+    font-weight: bold;
+    font-style: normal;
+    font-size: calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024)));
+    width: 50ch;
+    margin-left: 0rem;
+    line-height: 41px;
+  }
+
+  .quote-start {
+    position: relative;
+    left: -8rem;
+  }
+
+  .quote-end {
+    position: relative;
+    top: -3rem;
+    right: calc(-20rem - 20vw);
+  }
 }

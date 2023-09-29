@@ -44,6 +44,17 @@
     z-index: -5;
 }
 
+.stars {
+    position: absolute;
+    /* margin-top: calc(60vw-30rem); */
+    /* right: 10%; */
+    /* top: 5rem; */
+    z-index: -20;
+}
+.starWidth{
+    width: 100vw;
+}
+
 .boatFront {
     position: absolute;
     left: 8%;
@@ -229,7 +240,7 @@
     }
 
     .waves {
-        width: 800vw;
+        width: 230rem;
         height: auto;
     }
 

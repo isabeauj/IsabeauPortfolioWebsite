@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Stars from './stars';
 import BackgroundCSS from './background.module.css'
 import { useState, useEffect } from 'react';
 
@@ -20,11 +21,42 @@ function Background(props: any) {
         }
     }, []);
 
+
+    const birdStyle = {
+        transform: `translate3d(${-scrollPosition}px,0,0)`,
+        willChange: 'transform'
+    };
+    const backBoatStyle = {
+        transform: `translate3d(${scrollPosition * 0.4}px,0,0)`,
+        willChange: 'transform'
+    };
+    const midBoatStyle = {
+        transform: `translate3d(${-scrollPosition * 0.6}px,0,0)`,
+        willChange: 'transform'
+    };
+    const frontBoatStyle = {
+        transform: `translate3d(${scrollPosition * 0.8}px,0,0)`,
+        willChange: 'transform'
+    };
+
+    const frontWaveStyle = {
+        transform: `translate3d(${scrollPosition}px,0,0)`,
+        willChange: 'transform'
+    };
+    const midWaveStyle = {
+        transform: `translate3d(${-scrollPosition}px,0,0)`,
+        willChange: 'transform'
+    };
+    const backWaveStyle = {
+        transform: `translate3d(${scrollPosition * 0.7}px,0,0)`,
+        willChange: 'transform'
+    };
+
     return (
         <div className={`${BackgroundCSS.backgroundHolder}`}>
             <div className={`${BackgroundCSS.background}`} />
             <div className={`${BackgroundCSS.bird}`}>
-                <svg style={{ position: 'relative', left: -scrollPosition }} className={`${BackgroundCSS.mobileBird}`} width="292" height="158" viewBox="0 0 292 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={birdStyle} className={`${BackgroundCSS.mobileBird}`} width="292" height="158" viewBox="0 0 292 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_16_1144)">
                         <path d="M60.9449 87.1813C51.0211 62.6229 31.3293 72.6459 22.7239 80.7272C20.7708 82.0675 17.8483 83.1599 21.7833 76.8073C26.7021 68.8666 36.9242 59.5793 46.6609 61.1435C54.6211 62.4223 61.8357 70.4279 64.1632 76.1408C64.3303 79.1408 63.1856 82.1056 67.5234 77.1203C72.2225 71.7196 80.7035 78.3583 79.0244 84.1186C87.8028 73.6573 98.8096 74.6089 103.383 75.5949C113.673 77.8133 116.969 90.8048 119.387 101.092C121.805 111.38 118.995 110.179 117.288 108.293C107.075 76.1503 87.3111 84.2773 78.7057 92.3586C67.5396 104.936 62.2126 94.1478 60.9449 87.1813Z" fill="#173C33" />
                         <path d="M167.506 33.6567C157.583 9.09819 137.891 19.1212 129.285 27.2025C127.332 28.5428 124.41 29.6353 128.345 23.2827C133.264 15.3419 143.486 6.05469 153.222 7.61886C161.183 8.89764 168.397 16.9032 170.725 22.6162C170.892 25.6162 169.747 28.581 174.085 23.5957C178.784 18.195 187.265 24.8337 185.586 30.5939C194.364 20.1326 205.371 21.0842 209.945 22.0702C220.235 24.2886 223.531 37.2801 225.949 47.5678C228.366 57.8554 225.557 56.6545 223.85 54.7681C213.637 22.6256 193.873 30.7527 185.267 38.834C174.101 51.4117 168.774 40.6232 167.506 33.6567Z" fill="#173C33" />
@@ -46,7 +78,7 @@ function Background(props: any) {
             </div>
 
             <div className={`${BackgroundCSS.boatBack}`}>
-                <svg style={{ position: 'relative', left: scrollPosition * 0.4 }} width="133" height="119" viewBox="0 0 133 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={backBoatStyle} width="133" height="119" viewBox="0 0 133 119" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_16_1188)">
                         <path d="M36.4983 62.7625C26.7829 40.0771 42.1707 16.235 51.079 7.14963C44.0344 18.4269 54.6265 44.5659 60.8031 56.2257C55.6021 47.0951 42.4328 56.7792 36.4983 62.7625Z" fill="#173C33" />
                         <path d="M53.2976 12.3302C57.5948 22.3641 64.0908 44.062 66.8016 53.6567C67.8624 48.2978 82.5375 48.9611 89.7425 49.9626C83.4368 35.239 47.9261 -0.212209 53.2976 12.3302Z" fill="#173C33" />
@@ -92,7 +124,7 @@ function Background(props: any) {
 
 
             <div className={`${BackgroundCSS.boatFront}`}>
-                <svg style={{ position: 'relative', left: scrollPosition * 0.8 }} className={`${BackgroundCSS.mobileBoatFrontSize}`} width="193" height="179" viewBox="0 0 193 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={frontBoatStyle} className={`${BackgroundCSS.mobileBoatFrontSize}`} width="193" height="179" viewBox="0 0 193 179" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_18_1653)">
                         <path d="M143.764 74.9047C138.174 33.6821 95.2742 12.5216 74.5234 7.09425C94.4765 17.3055 101.789 64.2823 102.951 86.4943C102.568 68.7852 130 71.3891 143.764 74.9047Z" fill="#1F443B" />
                         <path d="M75.8 16.5081C78.2726 34.7412 87.6641 71.7481 92.0508 87.9725C85.8767 81.1402 65.2258 94.8059 55.6721 102.493C52.0438 75.7377 72.7092 -6.28331 75.8 16.5081Z" fill="#1F443B" />
@@ -133,7 +165,7 @@ function Background(props: any) {
 
                 <div className={`${BackgroundCSS.waveFront}`}>
                     {/* {#173c33 } */}
-                    <svg style={{ position: 'relative', left: scrollPosition }} className={`${BackgroundCSS.waves}`} width="412" height="83" viewBox="0 0 412 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style={frontWaveStyle} className={`${BackgroundCSS.waves}`} width="412" height="83" viewBox="0 0 412 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="f2" x="0" y="0" width="150%" height="150%">
                                 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
@@ -148,7 +180,7 @@ function Background(props: any) {
 
                 <div className={`${BackgroundCSS.waveMiddle}`}>
                     {/* #1a4037 */}
-                    <svg style={{ position: 'relative', left: -scrollPosition }} className={`${BackgroundCSS.waves}`} width="409" height="101" viewBox="0 0 409 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style={midWaveStyle} className={`${BackgroundCSS.waves}`} width="409" height="101" viewBox="0 0 409 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="f2" x="0" y="0" width="150%" height="150%">
                                 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
@@ -162,7 +194,7 @@ function Background(props: any) {
 
                 <div className={`${BackgroundCSS.waveBack}`}>
                     {/* #1F443B */}
-                    <svg style={{ position: 'relative', left: (scrollPosition * 0.7) }} className={`${BackgroundCSS.waves}`} width="405" height="117" viewBox="0 0 405 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style={backWaveStyle} className={`${BackgroundCSS.waves}`} width="405" height="117" viewBox="0 0 405 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="f2" x="0" y="0" width="150%" height="150%">
                                 <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
@@ -172,10 +204,13 @@ function Background(props: any) {
                         </defs>
                         <path d="M34.84 3.85016C46.32 2.75016 49.89 15.2302 61.95 16.4402C71.62 17.4102 72.48 9.70016 90.7 5.04016C98.28 3.10016 106.47 1.01016 115.63 3.73016C127.2 7.17016 124.55 13.9202 133.01 14.5202C143.8 15.2902 149.11 4.16016 161.88 2.40016C174.13 0.710165 178.44 10.6402 192.58 11.8302C207.86 13.1202 210.96 -1.37984 223.97 0.0901646C236.36 1.49016 237.52 13.5802 249.95 14.3702C260.8 15.0602 262.5 6.01016 275.67 5.47016C287.53 4.98016 289.3 12.1902 301.39 11.4002C312.62 10.6702 313.18 4.30016 323.84 3.98016C335.52 3.63016 337.51 11.2102 349.3 10.9702C360.65 10.7402 361.69 3.66016 371.12 3.98016C388.48 4.56016 399.66 29.0702 400.23 30.3502C404.22 39.3702 404.53 47.3502 404.52 50.7202C404.44 69.4002 393.71 82.3002 388.93 88.0502C382.4 95.9002 371.02 109.58 355.2 110.2C343.63 110.65 339.58 103.72 325.84 104.22C315.86 104.58 314.4 110.77 302.88 111.79C293.72 112.6 286.06 110.58 283.35 109.22C272.28 103.66 268.7 97.9302 260.83 98.4102C254.66 98.7802 250.64 102.95 241.6 108.43C237.67 110.81 233.09 112.08 227.86 112.84C214.06 114.84 210.08 106.93 197.47 107.27C183.42 107.65 182.08 117.63 171.25 116.44C157.45 114.92 152.77 100.07 139.71 98.5002C126.86 96.9502 126.55 110.7 110.53 110.42C98.92 110.22 97.65 102.05 84.56 102.06C72.19 102.06 69.26 109.35 60 107.14C50.04 104.76 50.26 95.5602 40.77 93.5002C29.83 91.1202 24.18 102.19 15.55 99.9302C3.07002 96.6602 0.540021 69.7302 0.300021 67.0802C-2.04998 42.0802 9.88002 20.1302 23.72 9.24016C29.65 4.57016 33.32 4.00016 34.84 3.85016Z" fill="#1F443B" />
                     </svg>
-
+                    
                 </div>
 
             </div>
+
+
+            
             <div className={`${BackgroundCSS.background}`} />
             <div className={`${BackgroundCSS.background}`} />
             <div className={`${BackgroundCSS.background}`} />

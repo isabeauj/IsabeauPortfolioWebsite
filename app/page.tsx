@@ -4,6 +4,7 @@ import Navbar from './navbar'
 import MobileNavbar from './mobileNavbar'
 import ImageWithTextButton from './ImageWithTextButton'
 import Background from './background'
+import Gallery from './gallery';
 import React, { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -81,10 +82,10 @@ export default function Home() {
               </clipPath>
             </defs>
           </svg>
-
+          <div>
           UI/UX stands for user interface user experience. UI/UX design means understanding the challenge, identifying the user, creating solutions for the challenge, and using visual hierarchy to create pleasing and practical aesthetics for a digital product.
           -Me
-          
+          </div>
           <svg className='quote-end' width="103" height="80" viewBox="0 0 103 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_18_1646)">
               <path d="M56.8562 23.0764C56.8562 10.3429 67.1663 -3.1326e-06 79.9155 -2.01802e-06C92.6648 -9.03447e-07 102.321 10.3429 102.95 23.0764C104.685 58.1063 60.0247 89.1853 65.054 77.4835C82.7068 36.5398 56.8562 49.9025 56.8562 23.0513L56.8562 23.0764Z" fill="#783608" />
@@ -99,6 +100,7 @@ export default function Home() {
 
           </div>
       </div>
+      <Gallery/>
       <div className='chonky'> chonky</div>
 
     </div>
