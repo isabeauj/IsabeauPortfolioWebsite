@@ -18,9 +18,8 @@ function ImageWithTextButton(props: any) {
             </clipPath>
           </defs>
         </svg>
-
       </div>
-      <span className={ImageButtonCSS.noHover}>FIND OUT</span>
+      <span className={ImageButtonCSS.noHover}>{props.text}</span>
     </button>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image'
 import Navbar from './navbar'
+import HowdyDoodie from './howdyDoodie';
 import MobileNavbar from './mobileNavbar'
 import ImageWithTextButton from './ImageWithTextButton'
 import Background from './background'
@@ -9,7 +10,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(1280);
-  
+
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     handleResize()
@@ -57,7 +58,7 @@ export default function Home() {
           />
           <div className='vertStack-left-aligned'>
             <p className='text'>Your friendly neighborhood UI/UX designer. What&apos;s a UI/UX designer?</p>
-            <ImageWithTextButton className='fish-location' />
+            <ImageWithTextButton text='FIND OUT' className='fish-location' />
             <Image
               src="/scroll.svg"
               alt="scroll arrow"
@@ -84,8 +85,8 @@ export default function Home() {
             </defs>
           </svg>
           <div>
-          UI/UX stands for user interface user experience. UI/UX design means understanding the challenge, identifying the user, creating solutions for the challenge, and using visual hierarchy to create pleasing and practical aesthetics for a digital product.
-          -Me
+            UI/UX stands for user interface user experience. UI/UX design means understanding the challenge, identifying the user, creating solutions for the challenge, and using visual hierarchy to create pleasing and practical aesthetics for a digital product.
+            -Me
           </div>
           <svg className='quote-end' width="103" height="80" viewBox="0 0 103 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_18_1646)">
@@ -99,9 +100,17 @@ export default function Home() {
             </defs>
           </svg>
 
-          </div>
+        </div>
       </div>
-      <Gallery/>
+      <Gallery className='gallery' />
+      <div className='horiz-flex-center'>
+        <h1> Hello </h1>
+        <h1> world </h1>
+      </div>
+      <div className='centered'>
+        <ImageWithTextButton text='VIEW PORTFOLIO' />
+      </div>
+      <HowdyDoodie className='howdy-doodie' />
       <div className='chonky'> chonky</div>
 
     </div>
