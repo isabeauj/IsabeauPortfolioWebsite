@@ -10,6 +10,57 @@ import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(1280);
+  const [words] = useState([
+    "References",
+    "Raving Reviews",
+    "Voices of Wow",
+    "Kudos Corner",
+    "Survey Says",
+    "Glowing Testimonials",
+    "Happy Camper Comments",
+    "Bravo Board",
+    "Applause Alley",
+    "High-Five Highlights",
+    "Shout-Out Showcase",
+    "Kaleidoscope of Kind Words",
+    "Rave Review Roundup",
+    "Joyful Jottings",
+    "Pats on the Back",
+    "Triumphant Testimonies",
+    "Buzzworthy Bravos",
+    "Kudos Kaboodle",
+    "Radiant Referrals",
+    "Hats Off",
+    "Avalanche of Accolades",
+    "Ripple of Raves",
+    "Review Roll Call",
+    "Testimonial Time Warp",
+    "Endorsement Extravaganza",
+    "Standing Ovation Station",
+    "Thumbs-Up Theater",
+    "Joyful Jibber-Jabber",
+    "Salutations & Salutes"
+  ])
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1); // For the fade effect
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOpacity(0);
+      setTimeout(() => {
+        // setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+
+        let randomIndex;
+        do {
+          randomIndex = Math.floor(Math.random() * words.length)
+        } while (randomIndex === currentWordIndex);
+        setCurrentWordIndex(randomIndex);
+
+        setOpacity(1);
+      }, 300);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [words]);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -25,6 +76,8 @@ export default function Home() {
       return <Navbar className='position' />;
     }
   };
+
+
 
   return (
     <div className='vertical-flex fixed-width'>
@@ -103,14 +156,53 @@ export default function Home() {
         </div>
       </div>
       <Gallery className='gallery' />
-      <div className='horiz-flex-center'>
-        <h1> Hello </h1>
-        <h1> world </h1>
-      </div>
       <div className='centered'>
         <ImageWithTextButton text='VIEW PORTFOLIO' />
       </div>
       <HowdyDoodie className='howdy-doodie' />
+
+      <div className="survey-quote" style={{ opacity }}>
+        {words[currentWordIndex]}
+      </div>
+
+      <div className='horiz-flex-top'>
+        <svg className='circle' width="720" height="977" viewBox="0 0 720 977" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_11_19)">
+            <rect x="68" y="64" width="857" height="841" rx="420.5" fill="#173C33" />
+          </g>
+          <defs>
+            <filter id="filter0_d_11_19" x="0" y="0" width="993" height="977" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="34" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.196078 0 0 0 0 0.160784 0 0 0 1 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_19" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_19" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+
+        <div className='yellow-border'>
+          <p className='reference-quote'>"I had the privilege of instructing Isabeau in a web design course my first semester as an instructor. From day one, I could easily tell that Isabeau was a bright, standout student. She was always enthusiastic, eager to learn, and open to pushing her skillset beyond her comfort zone. I observed her grow over the semesters. Then as a National Student Advertising Competiton (NSAC) advisor, I saw her act as a vital team member of the District's first-place student agency. I have no doubt that Isabeau's talent, passion, and positivity will set her up for success on any team."</p>
+          <p className='reference-reference-quote'>- Andy Sharpe, Owner of Sharpe Creative</p>
+        </div>
+        <div className='yellow-border'>
+          <p className='reference-quote'>"As a student at The Modern College of Design, Isa exhibited exceptional creative, organizational, and communication skills. She was a respected leader on campus and graduated as a valedictorian. She launched her professional career immediately and quickly became a valued member of the design industry."</p>
+          <p className='reference-reference-quote'>- Jessica Barry, President and Owner of The Modern College of Design</p>
+        </div>
+        <div className='yellow-border'>
+          <p className='reference-quote'>"Isabeau transformed our website into a user-friendly masterpiece. Her attention to detail and user-centric design principles exceeded our expectations, improving user engagement and satisfaction. We couldn't be happier!" </p>
+          <p className='reference-reference-quote'>- Robert Lair, CEO of LifeQuest Studios</p>
+        </div>
+        <div className='yellow-border'>
+          <p className='reference-quote'>"Isabeau transformed our website into a user-friendly masterpiece. Her attention to detail and user-centric design principles exceeded our expectations, improving user engagement and satisfaction. We couldn't be happier!" </p>
+          <p className='reference-reference-quote'>- Robert Lair, CEO of LifeQuest Studios</p>
+        </div>
+
+      </div>
+
       <div className='chonky'> chonky</div>
 
     </div>

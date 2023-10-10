@@ -29,6 +29,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/Open_Sans/static/OpenSans-Italic.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -187,7 +196,7 @@ body {
   z-index: 2;
 }
 
-.howdy-doodie{
+.howdy-doodie {
   margin-top: 12rem;
 }
 
@@ -196,6 +205,82 @@ body {
   justify-content: center;
   width: 100vw;
   margin-top: 2rem;
+}
+
+.circle {
+  z-index: -2;
+  position: absolute;
+  right: 0;
+  transform: translateY(-15rem);
+}
+
+.yellow-border {
+  flex: 20%;
+  border: 1.5px solid #cf7b0c;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.horiz-flex-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.reference-quote {
+  /* margin-top: calc(-2rem + 15vw); */
+  color: #a4b5b1;
+  font-family: 'OpenSansLight';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  width: 100%;
+  /* margin-top: 4rem; */
+
+  padding: 2rem;
+  line-height: 30px;
+  text-align: left;
+}
+
+.survey-quote {
+  /* margin-top: calc(-2rem + 15vw); */
+  color: #a4b5b1;
+  font-family: 'OpenSansLight';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 40px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0rem;
+  padding: 2rem;
+  padding-bottom: 0rem;
+  text-align: center;
+  min-height: 8rem;
+  /* margin-top: 4rem; */
+
+  line-height: 3rem;
+  transition: opacity 0.3s;
+}
+
+.reference-reference-quote {
+  /* margin-top: calc(-2rem + 15vw); */
+  color: #a4b5b1;
+  font-family: 'OpenSans';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  width: 100%;
+
+  padding: 2rem;
+  padding-top: 0rem;
+  line-height: 30px;
+  text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -267,7 +352,6 @@ body {
     margin-top: 3rem;
   }
 
-
   .fish-button {
     margin-left: 0rem;
     margin-top: 2rem;
@@ -328,6 +412,30 @@ body {
     /* background-color: red; */
   }
 
+  .yellow-border {
+    flex: 40%;
+  }
+
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .yellow-border {
+    flex: 100%;
+  }
+
+  .horiz-flex-top {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .circle {
+    z-index: -2;
+    position: absolute;
+    /* right: -10%; */
+    transform: translateY(-15rem);
+  }
+
 }
 
 /* Tablet only */
@@ -363,7 +471,7 @@ body {
   .quote {
     /* margin-top: calc(-2rem + 15vw); */
     color: #a4b5b1;
-    font-family: 'OpenSansLight';
+    font-family: 'OpenSans';
     font-weight: bold;
     font-style: normal;
     font-size: calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024)));
