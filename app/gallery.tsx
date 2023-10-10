@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import Thumbnail from './thumbnail';
 import GalleryCSS from './gallery.module.css';
 import { useState, useEffect } from 'react';
 

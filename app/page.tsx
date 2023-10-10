@@ -86,7 +86,7 @@ export default function Home() {
       <div className='horiz-flex-center rel-move mobile-vertical-stack'>
         <Image
           src="/header_logo.svg"
-          alt="Isabeau Jackson's Logo"
+          alt="Isabeau Jackson&apos;s Logo"
           className="large-logo"
           width={100}
           height={24}
@@ -103,7 +103,7 @@ export default function Home() {
           />
           <Image
             src="/Name.svg"
-            alt="Isabeau Jackson's Text Logo"
+            alt="Isabeau Jackson&apos;s Text Logo"
             className="isa-text"
             width={100}
             height={24}
@@ -171,8 +171,8 @@ export default function Home() {
             <rect x="68" y="64" width="857" height="841" rx="420.5" fill="#173C33" />
           </g>
           <defs>
-            <filter id="filter0_d_11_19" x="0" y="0" width="993" height="977" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <filter id="filter0_d_11_19" x="0" y="0" width="993" height="977" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
               <feOffset dy="4" />
               <feGaussianBlur stdDeviation="34" />
@@ -185,19 +185,19 @@ export default function Home() {
         </svg>
 
         <div className='yellow-border'>
-          <p className='reference-quote'>"I had the privilege of instructing Isabeau in a web design course my first semester as an instructor. From day one, I could easily tell that Isabeau was a bright, standout student. She was always enthusiastic, eager to learn, and open to pushing her skillset beyond her comfort zone. I observed her grow over the semesters. Then as a National Student Advertising Competiton (NSAC) advisor, I saw her act as a vital team member of the District's first-place student agency. I have no doubt that Isabeau's talent, passion, and positivity will set her up for success on any team."</p>
+          <p className='reference-quote'>&quot;I had the privilege of instructing Isabeau in a web design course my first semester as an instructor. From day one, I could easily tell that Isabeau was a bright, standout student. She was always enthusiastic, eager to learn, and open to pushing her skillset beyond her comfort zone. I observed her grow over the semesters. Then as a National Student Advertising Competiton (NSAC) advisor, I saw her act as a vital team member of the District&apos;s first-place student agency. I have no doubt that Isabeau&apos;s talent, passion, and positivity will set her up for success on any team.&quot;</p>
           <p className='reference-reference-quote'>- Andy Sharpe, Owner of Sharpe Creative</p>
         </div>
         <div className='yellow-border'>
-          <p className='reference-quote'>"As a student at The Modern College of Design, Isa exhibited exceptional creative, organizational, and communication skills. She was a respected leader on campus and graduated as a valedictorian. She launched her professional career immediately and quickly became a valued member of the design industry."</p>
+          <p className='reference-quote'>&quot;As a student at The Modern College of Design, Isa exhibited exceptional creative, organizational, and communication skills. She was a respected leader on campus and graduated as a valedictorian. She launched her professional career immediately and quickly became a valued member of the design industry.&quot;</p>
           <p className='reference-reference-quote'>- Jessica Barry, President and Owner of The Modern College of Design</p>
         </div>
         <div className='yellow-border'>
-          <p className='reference-quote'>"Isabeau transformed our website into a user-friendly masterpiece. Her attention to detail and user-centric design principles exceeded our expectations, improving user engagement and satisfaction. We couldn't be happier!" </p>
+          <p className='reference-quote'>&quot;Isabeau transformed our website into a user-friendly masterpiece. Her attention to detail and user-centric design principles exceeded our expectations, improving user engagement and satisfaction. We couldn&apos;t be happier!&quot; </p>
           <p className='reference-reference-quote'>- Robert Lair, CEO of LifeQuest Studios</p>
         </div>
         <div className='yellow-border'>
-          <p className='reference-quote'>"Isabeau transformed our website into a user-friendly masterpiece. Her attention to detail and user-centric design principles exceeded our expectations, improving user engagement and satisfaction. We couldn't be happier!" </p>
+          <p className='reference-quote'>&quot;Isabeau transformed our website into a user-friendly masterpiece. Her attention to detail and user-centric design principles exceeded our expectations, improving user engagement and satisfaction. We couldn&apos;t be happier!&quot; </p>
           <p className='reference-reference-quote'>- Robert Lair, CEO of LifeQuest Studios</p>
         </div>
 
