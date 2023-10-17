@@ -214,10 +214,42 @@ body {
   transform: translateY(-15rem);
 }
 
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+
+  width: 100vw;
+  height: 90vh;
+}
+
+.get-in-touch {
+  margin-top: 2rem;
+}
+
+.contact-reference-quote {
+  color: #FFFFFF;
+  font-family: 'OpenSansLight';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  width: 35%;
+
+  /* padding: 2rem; */
+  line-height: 30px;
+  text-align: center;
+}
+
 .rust-wave {
-  z-index: -2;
+  z-index: -5;
   position: absolute;
-  right: 0;
+  /* right: 0; */
+  /* width: 100vw; */
+  height: 100%;
+  /* height: 100%; */
   /* transform: translateY(-15rem); */
 }
 
@@ -257,11 +289,11 @@ body {
 
 .survey-quote {
   /* margin-top: calc(-2rem + 15vw); */
-  color: #a4b5b1;
-  font-family: 'OpenSansLight';
+  color: #FFFFFF;
+  font-family: 'OpenSans';
   font-weight: bold;
   font-style: normal;
-  font-size: 40px;
+  font-size: 2.9vw;
   width: 100%;
   margin: auto;
   margin-top: 15rem;
@@ -445,6 +477,10 @@ body {
     transform: translateY(-15rem);
   }
 
+  .survey-quote {
+    font-size: 7vw;
+  }
+
 }
 
 /* Tablet only */
@@ -472,6 +508,10 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  .survey-quote {
+    font-size: 4.7vw;
+  }
 }
 
 
@@ -480,7 +520,7 @@ body {
   .quote {
     /* margin-top: calc(-2rem + 15vw); */
     color: #a4b5b1;
-    font-family: 'OpenSans';
+    font-family: 'OpenSansLight';
     font-weight: bold;
     font-style: normal;
     font-size: calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024)));

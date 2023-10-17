@@ -10,7 +10,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(1280);
-  const [words] = useState([
+  const [referenceWords] = useState([
     "References",
     "Raving Reviews",
     "Voices of Wow",
@@ -41,7 +41,35 @@ export default function Home() {
     "Joyful Jibber-Jabber",
     "Salutations & Salutes"
   ])
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  const [contactWords] = useState([
+
+    "I'd Love To Hear From You",
+    "Hit Me Up: I'm Ready to Chat",
+    "Say Hello: I Promise Not to Bite",
+    "Contact Me, or Send a Carrier Pigeon",
+    "Telepathic Communication - Optional",
+    "Reach Out and High-Five My Inbox",
+    "Ping Me, Email Me, Morse Code Me",
+    "I'm All Ears - So Let's Talk!",
+    "Yelling Into The Void Gets Tiring",
+  ])
+
+  const [aboutmeWords] = useState([
+    "Howdy Doody, Pardner, I'm Isabeau",
+    "Who Am I? Somebody Tell Me",
+    "Meet The Human Behind The Pixels",
+    "Dive Into The Wonderland Of Me",
+    "The Wild And Whimsical World Of Isabeau",
+    "Unraveling The Enigma: Who Am I, Really?",
+    "Buckle Up For A Journey Into My Mind",
+    "Bio Deconstructed: The Story of Isabeau",
+  ])
+
+
+  const [currentReferenceWordIndex, setCurrentReferenceWordIndex] = useState(0);
+  const [currentContactWordIndex, setCurrentContactWordIndex] = useState(0);
+  const [currentAboutmeWordIndex, setCurrentAboutmeWordIndex] = useState(0);
   const [opacity, setOpacity] = useState(1); // For the fade effect
 
   useEffect(() => {
@@ -52,15 +80,25 @@ export default function Home() {
 
         let randomIndex;
         do {
-          randomIndex = Math.floor(Math.random() * words.length)
-        } while (randomIndex === currentWordIndex);
-        setCurrentWordIndex(randomIndex);
+          randomIndex = Math.floor(Math.random() * referenceWords.length)
+        } while (randomIndex === currentReferenceWordIndex);
+        setCurrentReferenceWordIndex(randomIndex);
+
+        do {
+          randomIndex = Math.floor(Math.random() * contactWords.length)
+        } while (randomIndex === currentContactWordIndex);
+        setCurrentContactWordIndex(randomIndex);
+
+        do {
+          randomIndex = Math.floor(Math.random() * aboutmeWords.length)
+        } while (randomIndex === currentAboutmeWordIndex);
+        setCurrentAboutmeWordIndex(randomIndex);
 
         setOpacity(1);
       }, 300);
     }, 3000);
     return () => clearInterval(interval);
-  }, [words]);
+  }, [referenceWords, contactWords, aboutmeWords]);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -153,16 +191,16 @@ export default function Home() {
             </defs>
           </svg>
 
-        </div>1
+        </div>
       </div>
       <Gallery className='gallery' />
       <div className='centered'>
         <ImageWithTextButton text='VIEW PORTFOLIO' />
       </div>
-      <HowdyDoodie className='howdy-doodie' />
+      <HowdyDoodie className='howdy-doodie' titleWords={aboutmeWords[currentAboutmeWordIndex]} />
 
       <div className="survey-quote" style={{ opacity }}>
-        {words[currentWordIndex]}
+        {referenceWords[currentReferenceWordIndex]}
       </div>
 
       <div className='horiz-flex-top'>
@@ -203,7 +241,7 @@ export default function Home() {
 
       </div>
 
-      <div>
+      <div className='contact'>
         <svg className='rust-wave' width="1512" height="879" viewBox="0 0 1512 879" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_534_15192)">
             <path d="M1871.33 482.712C1962.79 367.059 2040.75 250.612 1880.48 344.047C1880.48 344.047 1885.74 403.545 1807.18 301.241L1795.89 301.114C1790.69 292.647 1785.28 284.243 1779.62 275.929C1760.22 247.444 1737.97 218.97 1708.71 194.446C1669.36 161.471 1630.46 157.854 1567.26 158.695C1453.61 160.207 1330.29 158.15 1240.91 110.853C1216.61 97.9962 1195.39 82.0032 1167.57 72.9489C1122.85 58.3997 1069.09 64.4711 1023.1 77.0899C974.363 90.465 930.371 110.578 882.704 125.593C835.037 140.607 780.79 150.486 729.856 141.591C648.751 127.433 590.311 68.6703 506.528 68.9401C416.966 69.2257 380.23 131.162 304.262 150.095C240.222 166.056 169.993 144.145 111.427 120.494C83.4626 109.203 54.7917 97.0918 22.4222 94.4421C-10.0337 91.7872 -41.4374 99.1914 -69.5193 109.573C-84.6989 115.184 -98.7241 121.748 -111.776 129.051C-163.722 158.092 -200.45 198.788 -234.728 237.634C-246.303 250.755 -257.478 264.045 -268.26 277.489L-375.451 276.262C-375.451 276.262 -463.262 260.216 -381.145 420.247C-378.514 425.377 -375.821 430.491 -373.088 435.6C-375.828 440.709 -378.514 445.823 -381.145 450.953C-404.751 496.949 -422.278 515.549 -432 522.308C-418.022 522.366 -386.571 533.05 -333.517 591.262L-269.65 591.966C-258.444 606.007 -246.806 619.885 -234.728 633.572C-200.45 672.417 -163.722 713.109 -111.776 742.154C-98.7162 749.452 -84.6989 756.016 -69.5193 761.632C-41.4374 772.014 -10.0416 779.418 22.4222 776.763C54.7917 774.114 83.4626 762.003 111.427 750.711C169.993 727.06 240.214 705.149 304.262 721.11C380.23 740.044 416.974 801.98 506.528 802.265C590.311 802.535 648.751 743.772 729.856 729.615C780.798 720.719 835.037 730.598 882.704 745.613C930.371 760.627 974.363 780.746 1023.1 794.115C1069.08 806.734 1122.85 812.806 1167.57 798.256C1195.4 789.202 1216.62 773.215 1240.91 760.352C1330.29 713.056 1453.61 710.993 1567.26 712.511C1630.46 713.352 1669.36 709.734 1708.71 676.759C1731.29 657.831 1747.84 635.92 1764.57 614.3L1837.92 615.104C1868.9 574.767 1885.02 570.097 1892.03 572.323C1889.01 565.951 1884.8 552.713 1880.48 527.147C1877.98 512.328 1874.92 497.499 1871.33 482.712Z" fill="#783608" />
@@ -221,9 +259,12 @@ export default function Home() {
             </filter>
           </defs>
         </svg>
-
+        <div className="survey-quote" style={{ opacity }}>
+          {contactWords[currentContactWordIndex]}
+        </div>
+        <p className='contact-reference-quote'>If you have any questions, are interested in working with me, or if you want to talk about any old hullabaloo, feel free to reach out!</p>
+        <ImageWithTextButton className='get-in-touch' text='GET IN TOUCH' />
       </div>
-
 
       <div className='chonky'> chonky</div>
 
