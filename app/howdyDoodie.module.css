@@ -25,7 +25,7 @@
     font-display: swap;
 }
 
-.horizFlex {
+.flex {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -47,51 +47,26 @@
 .image {
     position: relative;
     margin-left: auto;
-    margin-bottom: 5rem;
-    width: 30%;
-    height: 30%;
-    z-index: 2;
-    object-fit: cover;
-    border-radius: 3rem;
-    transition: transform 0.05s ease, border 0.3s ease;
-    padding-top: 100%;
-    padding-left: 50%;
-    padding-right: 50%;
-    /* Add transform to the transition */
+    width: 50%;
 }
 
 .image2 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: unset;
     /* transform: translate(-50%, -50%); */
     z-index: 2;
-    /* padding-top: 10%; */
-    /* padding-left: 10%; */
-
-    width: 90%;
-    height: 100%;
-    box-sizing: border-box;
-    /* Ensures padding is included in width/height calculation */
-    font-family: OpenSans;
-    font-size: 14px;
-    box-sizing: border-box;
-    /* Ensures padding is included in width/height calculation */
-    font-family: OpenSans;
-    font-size: 14px;
-    /* This ensures the text is above the image */
-    font-family: OpenSans;
-    font-size: 14px;
-    font-weight: bold;
-    color: #0D3229;
+    border-radius: 3rem;
+    width: auto;
+    height: auto;
 }
 
 .rays {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    transform: translate(-50%, -36%);
+    /* top: -50%; */
+    /* left: -50%; */
+    /* right: 0; */
+    /* bottom: 0; */
     z-index: 1;
 }
 
@@ -126,13 +101,68 @@
 }
 
 .picSide {
+    position: relative;
     /* margin-left: 6rem; */
     width: 100%;
 }
 
+@media (max-width: 1024px) {
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+        width: 40%;
+        height: 40%;
+        z-index: 2;
+        object-fit: cover;
+        border-radius: 3rem;
+        transition: transform 0.05s ease, border 0.3s ease;
+        /* Add transform to the transition */
+    }
+
+    .textSide {
+
+        margin-left: 0;
+        margin-right: 0;
+        width: 70%;
+    }
+
+    .text {
+        color: #FFFFFF;
+        font-family: 'OpenSans';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 4.7vw;
+        width: 100%;
+        /* margin-left: 4.5rem; */
+        /* margin-top: 3rem; */
+        text-align: left;
+    }
+
+    .quoteText {
+        margin-top: 1.5rem;
+        color: #a4b5b1;
+        font-family: 'OpenSansLight';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 2.5vw;
+        width: 100%;
+        /* margin-left: 0rem; */
+        line-height: 5vw;
+        text-align: left;
+    }
+}
 
 @media (max-width: 600px) {
-    .horizFlex {
+    .flex {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -141,17 +171,16 @@
 
     .picSide {
         /* margin-left: 6rem; */
-        width: 90%;
+        width: 100%;
         /* margin-right: auto; */
-        position: relative;
-        left: -1rem;
+        
     }
 
     .image {
-        margin-left: 0;
-        margin-bottom: 5rem;
-        width: 80%;
-        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        width: 60%;
         z-index: 2;
         object-fit: cover;
         border-radius: 3rem;
@@ -178,10 +207,10 @@
         font-family: 'OpenSansLight';
         font-weight: bold;
         font-style: normal;
-        font-size: 6vw;
+        font-size: 4.4vw;
         width: 80%;
         /* margin-left: 0rem; */
-        line-height: 10vw;
+        line-height: 8.2vw;
         text-align: left;
     }
 
@@ -190,3 +219,4 @@
         width: 100%;
     }
 }
+

@@ -197,7 +197,7 @@ body {
 }
 
 .howdy-doodie {
-  margin-top: 12rem;
+  margin-top: 22rem;
 }
 
 .centered {
@@ -212,6 +212,13 @@ body {
   position: absolute;
   right: 0;
   transform: translateY(-15rem);
+}
+
+.rust-wave {
+  z-index: -2;
+  position: absolute;
+  right: 0;
+  /* transform: translateY(-15rem); */
 }
 
 .yellow-border {
@@ -257,6 +264,7 @@ body {
   font-size: 40px;
   width: 100%;
   margin: auto;
+  margin-top: 15rem;
   margin-bottom: 0rem;
   padding: 2rem;
   padding-bottom: 0rem;
@@ -283,6 +291,7 @@ body {
   text-align: left;
 }
 
+/* ipad and lower */
 @media (max-width: 1024px) {
   .mobile-vertical-stack {
     width: 100vw;
@@ -413,7 +422,7 @@ body {
   }
 
   .yellow-border {
-    flex: 40%;
+    flex: 100%;
   }
 
 }
