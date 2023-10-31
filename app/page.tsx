@@ -259,7 +259,7 @@ export default function Home() {
             </filter>
           </defs>
         </svg>
-        <div className="survey-quote" style={{ opacity }}>
+        <div className="bottom-survey-quote" style={{ opacity }}>
           {contactWords[currentContactWordIndex]}
         </div>
         <p className='contact-reference-quote'>If you have any questions, are interested in working with me, or if you want to talk about any old hullabaloo, feel free to reach out!</p>
